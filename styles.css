@@ -1,0 +1,96 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.circle-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.circle,
+.center-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.center-circle {
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+}
+
+/* Positioniere die restlichen Kreise im Kreis um den Mittelpunkt */
+.circle:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.circle:nth-child(2) {
+  top: 30%;
+  left: 85%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.circle:nth-child(3) {
+  top: 74%;
+  left: 85%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.circle:nth-child(4) {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.circle:nth-child(5) {
+  top: 74%;
+  left: 15%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.circle:nth-child(6) {
+  top: 30%;
+  left: 15%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.circle:nth-child(7) {
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
